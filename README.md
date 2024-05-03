@@ -1,6 +1,17 @@
-# Nuxt 3 Minimal Starter
+# Dark mode for [Editor.js](https://editorjs.io/)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> Note:
+> Feel free to copy and use the style in your projects.
+
+[Go to style](/app.vue#L46)
+
+### Light mode
+
+![light mode](./public/light.png)
+
+### Dark mode
+
+![dark mode](./public/dark.png)
 
 ## Setup
 

@@ -1,6 +1,6 @@
 <template>
   <div class="dark w-screen h-screen">
-    <div class="flex flex-col pt-20 gap-8">
+    <div class="flex flex-col pt-10 gap-8">
       <div class="w-full flex justify-center">
         <h1 class="dark:text-white font-semibold text-3xl text-slate-900">
           EditorJS Dark-mode
@@ -21,7 +21,7 @@ import { onMounted, ref } from "vue";
 
 const editor = new EditorJS({
   holder: "editor",
-  placeholder: "Start building your Project here, write...",
+  placeholder: "Start typing here...",
   // autofocus: true,
   inlineToolbar: true,
   // readOnly: true,
@@ -121,6 +121,10 @@ onMounted(() => {
 .dark .cdx-search-field__input::selection,
 .dark .ce-block.ce-block--selected .ce-block__content {
   background-color: var(--selected);
+}
+
+.dark .ce-popover__items {
+  scrollbar-color: var(--border) var(--main);
 }
 
 @media (max-width: 650px) {
