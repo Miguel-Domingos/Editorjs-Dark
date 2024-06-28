@@ -3,7 +3,7 @@
 > Note:
 > Feel free to copy and use the style in your projects.
 
-[Go to style](/app.vue#L46)
+[Go to style](/app.vue#L52)
 
 ### Light mode
 
