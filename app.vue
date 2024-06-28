@@ -17,6 +17,7 @@
 import EditorJS from "@editorjs/editorjs";
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
+import Table from "@editorjs/table";
 import { onMounted, ref } from "vue";
 
 const editor = new EditorJS({
@@ -32,6 +33,10 @@ const editor = new EditorJS({
     },
     list: {
       class: List,
+      inlineToolbar: true,
+    },
+    table: {
+      class: Table,
       inlineToolbar: true,
     },
   },
@@ -93,7 +98,8 @@ onMounted(() => {
 
 .dark .ce-inline-toolbar,
 .dark .ce-conversion-tool__icon,
-.dark .ce-popover-item__icon {
+.dark .ce-popover-item__icon,
+.dark .tc-popover__item-icon {
   color: var(--text);
   background-color: var(--primary);
   border-color: var(--border);
@@ -101,7 +107,8 @@ onMounted(() => {
 
 .dark .ce-popover,
 .dark .ce-conversion-toolbar,
-.dark .ce-inline-toolbar {
+.dark .ce-inline-toolbar,
+.dark .tc-popover {
   background-color: var(--primary);
   border-color: var(--border);
   box-shadow: 0 3px 15px -3px var(--border);
@@ -116,15 +123,22 @@ onMounted(() => {
   background-color: var(--selected);
 }
 
-.dark .ce-block .ce-block__content *::selection,
-.dark .cdx-block *::selection,
-.dark .cdx-search-field__input::selection,
+.dark *::selection,
 .dark .ce-block.ce-block--selected .ce-block__content {
   background-color: var(--selected);
 }
 
 .dark .ce-popover__items {
   scrollbar-color: var(--border) var(--main);
+}
+/* table class wrapper */
+.dark .tc-wrap,
+.dark .tc-wrap * {
+  --color-border: var(--border);
+  --color-text-secondary: var(--text);
+  --color-background: var(--selected);
+  --toggler-dots-color: var(--selected);
+  --toggler-dots-color-hovered: var(--text);
 }
 
 @media (max-width: 650px) {
